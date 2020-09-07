@@ -1,0 +1,16 @@
+.texto {
+  width: 100px;
+  height: 100px;
+}
+.bloque {
+  display: block;
+}
+.linea {
+  display: inline;
+}
+.ambas {
+  display: inline-block;
+}
+.hidden {
+  display: none;
+}
