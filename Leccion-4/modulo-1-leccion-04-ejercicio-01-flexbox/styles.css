@@ -1,0 +1,13 @@
+.container {
+  border: 1px solid red;
+  width: 500px;
+  height: 500px;
+  display: flex;
+}
+.item {
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}

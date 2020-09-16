@@ -1,0 +1,14 @@
+.titulo {
+  background-color: blue;
+}
+
+.container {
+  border: 2px solid red;
+}
+.lista {
+  display: inline;
+}
+.elemento {
+  display: inline;
+  margin: 12px;
+}
