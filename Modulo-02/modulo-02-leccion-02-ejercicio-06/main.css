@@ -1,0 +1,16 @@
+.button1,
+.button2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(121, 55, 47);
+  background-color: salmon;
+  width: 76px;
+  height: 45px;
+  border-radius: 22.5px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
