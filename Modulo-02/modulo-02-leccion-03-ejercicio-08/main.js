@@ -1,3 +1,4 @@
 "use strict";
 
-let year = 2020;
+let = 2020;
+
