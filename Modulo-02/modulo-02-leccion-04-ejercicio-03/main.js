@@ -1,9 +1,16 @@
 "use strict";
 
-function ticket(a) {
-  return a;
+function finalPriceCalculator(a) {
+  const vatValue = (a * 21) / 100;
+  console.log(
+    "Precio sin IVA: ",
+    a,
+    " IVA: ",
+    vatValue,
+    " Total: ",
+    a + vatValue
+  );
 }
-const price = 29;
-const IVA = 2.1;
 
-console.log("Precio sin IVA:", price, "IVA", IVA, "Total:", price + IVA);
+finalPriceCalculator(23);
+finalPriceCalculator(44);
