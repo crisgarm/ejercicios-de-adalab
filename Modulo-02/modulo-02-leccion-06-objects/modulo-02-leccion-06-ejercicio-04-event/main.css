@@ -1,0 +1,9 @@
+.btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  border: rgb(74, 171, 216);
+  background-color: rgb(74, 171, 216);
+  color: white;
+  cursor: pointer;
+}
