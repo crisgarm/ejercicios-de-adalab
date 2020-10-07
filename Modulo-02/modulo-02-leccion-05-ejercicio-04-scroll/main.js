@@ -5,8 +5,10 @@ const div = document.querySelector(".container");
 
 //handler
 function addBackgroundColor() {
-  if (window.scrollY > 250) div.classList.add("salmon");
-  else if (window.scrollY > 300) {
+  if (window.scrollY > 250) {
+    div.classList.remove("blue");
+    div.classList.add("salmon");
+  } else if (window.scrollY < 200) {
     div.classList.remove("salmon");
     div.classList.add("blue");
   }
