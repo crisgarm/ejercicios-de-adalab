@@ -1,26 +1,30 @@
 "use strict";
 
+//Creamos un objeto con unas propiedades y varios métodos
 const pearsBasket = {};
-max = 10;
-min = 2;
-current = 5;
-initial = 8;
+pearsBasket.max = 10;
+pearsBasket.min = 0;
+pearsBasket.current = 5;
+pearsBasket.initial = 2;
+
+//Añadimos al cesto una pera
 pearsBasket.add = function () {
-  return;
+  return `Si añado una pera al cesto, tendría actualmente ${
+    pearsBasket.current + 1
+  }. `;
 };
+console.log(pearsBasket.add());
 
-// adalaber1.run = (phrase) => `${phrase}`;
-// adalaber1.runAMarathon = (distance) =>
-//   `Estoy corriendo un maratón de ${distance} kilómetros.`;
+//Sacamos del cesto una pera
+pearsBasket.remove = function () {
+  return `Si quito una pera del cesto, tendría actualmente ${
+    pearsBasket.current - 1
+  }. `;
+};
+console.log(pearsBasket.remove());
 
-// console.log(adalaber1.run("Estoy corriendo."));
-// console.log(adalaber1.runAMarathon(50));
-
-// const adalaber = {};
-// adalaber.name = 'María';
-// adalaber.sayHello = function() {
-//   return 'Hola, me llamo ' + this.name;
-// };
-
-// // Muestra en la consola 'Hola, me llamo María'
-// console.log(adalaber.sayHello());
+//Restablecemos el número de peras al valor inicial.
+pearsBasket.rest = function () {
+  return `Si restablezco el número de peras al valor inicial, tendría actualmente ${pearsBasket.initial}. `;
+};
+console.log(pearsBasket.rest());
