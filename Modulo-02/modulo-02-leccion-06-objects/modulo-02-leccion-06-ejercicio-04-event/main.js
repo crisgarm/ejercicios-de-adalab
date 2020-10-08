@@ -3,7 +3,7 @@
 const buttonElement = document.querySelector(".btn");
 
 function handleButtonClick(event) {
-  console.log(event.type);
+  console.log(event);
 }
 
 buttonElement.addEventListener("click", handleButtonClick);
