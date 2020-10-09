@@ -10,3 +10,6 @@ for (let i = 0; i < numbers.length; i++) {
 }
 acc = acc / 5;
 console.log("La puntuación final es " + acc);
+
+//Añadimos un nuevo número al array y repetimos el cálculo de la media
+//Generalizamos el código anterior creando una función average
