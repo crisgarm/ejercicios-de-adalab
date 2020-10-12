@@ -1,13 +1,17 @@
 "use strict";
 
+let getNumber = undefined;
+
 function oddEven(number) {
   if (number % 2 === 0) {
-    return true;
+    getNumber = true;
     // console.log(`El número ${number} es par.`);
   } else {
-    return false;
+    getNumber = false;
     // console.log(`El número ${number} es impar.`);
   }
+  console.log(getNumber);
+  return getNumber;
 }
 
-oddEven(397);
+console.log(oddEven(398));
