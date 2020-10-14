@@ -1,6 +1,6 @@
 "use strict";
 
-
+//**Esta forma solamente genera un párrafo**
 const createElement = document.querySelector("main");
 const content = "<p>Lorem ipsum</p>";
 const paragraph = document.querySelector(".text");
@@ -11,13 +11,11 @@ function addParagraph(){
   console.log(createElement);
 }
 
-paragraph.addEventListener("click", addParagraph);
+paragraph.addEventListener("mouseover", addParagraph);
 
-// elemento de HTML
+// **Esta forma genera un párrafo nuevo cada vez que sucede el evento**
 // const paragraph = document.querySelector(".text");
 // const text = "<p>Lorem ipsum</p>";
-
-// handler
 
 // function addParagraph() {
 // let secondParagraph = document.createElement("p");
@@ -25,4 +23,4 @@ paragraph.addEventListener("click", addParagraph);
 // document.body.insertBefore(secondParagraph, paragraph.nextSibling);
 // }
 
-//listener sobre el elemento, con tipo de evento y handler
+//paragraph.addEventListener("mouseover", addParagraph);
