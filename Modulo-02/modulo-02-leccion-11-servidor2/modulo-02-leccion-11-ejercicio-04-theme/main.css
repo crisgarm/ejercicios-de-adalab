@@ -1,0 +1,9 @@
+.light {
+  background-color: rgb(116, 193, 223);
+  color: rgb(5, 36, 48);
+}
+
+.dark {
+  background-color: rgb(5, 36, 48);
+  color: rgb(116, 193, 223);
+}
