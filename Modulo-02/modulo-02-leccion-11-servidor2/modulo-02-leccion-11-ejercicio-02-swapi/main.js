@@ -12,11 +12,11 @@ function getSwapi() {
   //     text.innerHTML = data.name
   //     text2.innerHTML = data.gender
   //   });
-  debugger;
+  
   fetch("https://swapi.dev/api/people/?search=" + input.value)
     .then(response => response.json())
     .then(data => {
-      text.innerHTML = data.name
+      text.innerHTML = `${data.name}`
       text2.innerHTML = data.gender
       console.log(data.result);
     });
