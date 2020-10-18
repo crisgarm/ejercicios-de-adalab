@@ -9,3 +9,5 @@ const tasks = [
     completed: false
   }
 ];
+
+const list = document.querySelector(".js-list");
