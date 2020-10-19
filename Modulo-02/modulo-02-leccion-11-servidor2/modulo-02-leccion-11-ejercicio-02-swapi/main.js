@@ -10,11 +10,9 @@ const text2 = document.querySelector(".js-text2");
   fetch("https://swapi.dev/api/people/?search=" + input.value)
     .then(response => response.json())
     .then(data => {
-      text.innerHTML = `${data.results[0].name}`
-      text2.innerHTML = `${data.results[0].gender}`
       let contentList = "";
       for (let i = 0; i < data.results.length; i++) {
-        let liContent = `<li>${data.results[i].name},${data.results[i].gender}</li>`;
+        let liContent = `<li>Name: ${data.results[i].name}</li><li>Gender: ${data.results[i].gender}</li>`;
         contentList += liContent;
       }
       list.innerHTML = contentList;

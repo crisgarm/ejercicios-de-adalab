@@ -1,18 +1,18 @@
 "use strict";
 
-const main = document.querySelector("js-main");
+const main = document.querySelector(".js-main");
 const inputLight = document.querySelector(".js-light");
 const inputDark = document.querySelector(".js-dark");
-let checked = ""
 
-function select () {
-  if (inputLight === checked) {
+function select (event) {
+  if (event.currentTarget.value === "lightTheme") {
     main.classList.add("light");
     main.classList.remove("dark");
-  } else if (inputDark === checked) {
+  } else if (event.currentTarget.value === "darkTheme") {
     main.classList.remove("light");
     main.classList.add("dark");
   }
 }
 
-select();
+inputLight.addEventListener("click", select);
+inputDark.addEventListener("click", select);
