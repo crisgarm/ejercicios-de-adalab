@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+}
+
 .light {
   background-color: rgb(116, 193, 223);
   color: rgb(5, 36, 48);
