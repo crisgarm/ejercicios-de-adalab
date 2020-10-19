@@ -5,34 +5,34 @@ const inputSurname = document.querySelector(".js-surname");
 const text = document.querySelector(".js-text");
 const text2 = document.querySelector(".js-text2");
 
-//Objeto que quiero guardar en el localStorage
-const data = {
-  name: "", //inputName.value,
-  surname: "", //inputSurname.value,
-};
-
-//Convertir un objeto en cadena de caracteres
-const stringUser = JSON.stringify(data);
-localStorage.setItem("userData",stringUser);
-
-//Cuando queramos hacer uso de él, convertir una cadena de caracteres en objeto
-const userInfo = localStorage.getItem("userData");
-const objAdalaber = JSON.parse(userInfo);
-console.log(objAdalaber.name, objAdalaber.surname);
-
-function getInputValue(){
-  text.innerHTML = inputName.value;
-  text2.innerHTML = inputSurname.value;
-  localStorage.setItem("name", inputName.value);
-  localStorage.setItem("surname", inputSurname.value);
+//Función cuando sucede el evento
+function getInputValue() {
+  //Objeto que quiero guardar en el localStorage
+  const data = {
+    name: inputName.value,
+    surname: inputSurname.value,
+  };
+  // convierto el objeto en string
+  const stringData = JSON.stringify(data);
+  // guardo el string en el local storage
+  localStorage.setItem("userData", stringData);
 }
 
-//Obtener los valores de localStorage
-inputName.value = localStorage.getItem("name");
-text.innerHTML= localStorage.getItem("name");
-inputSurname.value = localStorage.getItem("surname");
-text2.innerHTML= localStorage.getItem("surname");
-
-//Listener
 inputName.addEventListener("keyup", getInputValue);
 inputSurname.addEventListener("keyup", getInputValue);
+
+//Función al arrancar la página
+function getFromLocalStorage() {
+  // leo los datos del local storage en formato string
+  const stringUser = localStorage.getItem("userData");
+  // parseo de string a objeto
+  const user = JSON.parse(stringUser);
+  // compruebo si el objeto tiene información útil
+  if (user !== null) {
+    // si entra por aquí es que NO es la primera vez que entra en la página
+    inputName.value = user.name;
+    inputSurname.value = user.surname;
+  }
+}
+
+getFromLocalStorage();
