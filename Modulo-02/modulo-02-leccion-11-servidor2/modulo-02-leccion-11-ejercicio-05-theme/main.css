@@ -1,11 +1,17 @@
 body {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
 }
 main {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+h1 {
+  margin: 0;
+}
 .light {
   background-color: rgb(116, 193, 223);
   color: rgb(5, 36, 48);

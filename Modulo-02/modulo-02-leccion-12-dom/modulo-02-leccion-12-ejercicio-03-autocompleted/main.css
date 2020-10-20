@@ -7,3 +7,19 @@ input {
   display: block;
   margin-bottom: 15px;
 }
+
+.liContent {
+  border: 3px solid rgb(151, 55, 79);
+}
+
+.uno {
+  background-color: aquamarine;
+}
+
+.dos {
+  background-color: rgb(216, 177, 218);
+}
+
+.tres {
+  background-color: rgb(232, 238, 145);
+}
