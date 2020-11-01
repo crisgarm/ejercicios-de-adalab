@@ -1,9 +1,10 @@
+import React from "react";
 import logo from "./cristina-garcia.jpg";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  render() {
+    const appHeader = (
       <header className="header">
         <img src={logo} className="header-image" alt="Cristina García" />
         <div className="header-container">
@@ -11,6 +12,8 @@ function App() {
           <p className="header-date">Domingo 01 de noviembre de 2020</p>
         </div>
       </header>
+    );
+    const appMain = (
       <main>
         <p className="main-content">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit quo
@@ -22,6 +25,8 @@ function App() {
           dolorem! At in omnis animi similique fugit eius doloribus.
         </p>
       </main>
+    );
+    const appFooter = (
       <footer className="footer">
         <small className="footer-content">Leer más...</small>
         <div className="footer-likes">
@@ -29,8 +34,15 @@ function App() {
           <i class="fas fa-heart"></i>
         </div>
       </footer>
-    </div>
-  );
+    );
+    const appRoot = (
+      <div className="App">
+        {appHeader} {appMain} {appFooter}
+      </div>
+    );
+
+    return appRoot;
+  }
 }
 
 export default App;
