@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./cristina-garcia.jpg";
-import "./App.css";
+import "./App.scss";
 
 class App extends React.Component {
   render() {
@@ -8,8 +8,10 @@ class App extends React.Component {
       <header className="header">
         <img src={logo} className="header-image" alt="Cristina García" />
         <div className="header-container">
-          <h1 className="header-title">Cristina García Martín</h1>
-          <p className="header-date">Domingo 01 de noviembre de 2020</p>
+          <h1 className="header-container--title">Cristina García Martín</h1>
+          <p className="header-container--date">
+            Domingo 01 de noviembre de 2020
+          </p>
         </div>
       </header>
     );
