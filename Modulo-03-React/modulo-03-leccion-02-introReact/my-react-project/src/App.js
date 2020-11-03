@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     const appHeader = (
       <header className="header">
-        <img src={logo} className="header-image" alt="Cristina García" />
+        <img src={logo} className="header__image" alt="Cristina García" />
         <div className="header-container">
           <h1 className="header-container--title">Cristina García Martín</h1>
           <p className="header-container--date">
