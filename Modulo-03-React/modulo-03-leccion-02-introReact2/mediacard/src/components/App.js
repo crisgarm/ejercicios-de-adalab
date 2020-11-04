@@ -1,6 +1,6 @@
 import React from "react";
 import "../stylesheets/App.scss";
-import MediaCard from "./MediaCard";
+import MediaList from "./MediaList";
 
 class App extends React.Component {
   // eslint-disable-next-line
@@ -9,7 +9,16 @@ class App extends React.Component {
   }
 
   render() {
-    return <MediaCard />;
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">Game of Cards</h1>
+        </header>
+        <main>
+          <MediaList />
+        </main>
+      </div>
+    );
   }
 }
 export default App;
