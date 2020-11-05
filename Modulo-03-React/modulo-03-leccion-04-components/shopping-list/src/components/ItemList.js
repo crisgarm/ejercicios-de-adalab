@@ -23,6 +23,11 @@ const arrayOfItems = [
     category: "Bebida",
     price: 5,
   },
+  {
+    quantity: 2,
+    category: "Bebida",
+    price: 5,
+  },
 ];
 
 class ItemList extends React.Component {
