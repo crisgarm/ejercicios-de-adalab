@@ -1,5 +1,6 @@
 import React from "react";
 import "../stylesheets/App.css";
+import Destiny from "./Destiny";
 
 class App extends React.Component {
   // eslint-disable-next-line
@@ -8,7 +9,11 @@ class App extends React.Component {
   }
 
   render() {
-    return <div className="App">Hola Cris</div>;
+    return (
+      <div className="App">
+        <Destiny />
+      </div>
+    );
   }
 }
 
