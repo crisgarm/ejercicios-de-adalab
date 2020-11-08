@@ -8,10 +8,23 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(198, 77, 223);
+  background-color: rgb(168, 24, 137);
 }
 
 .form__label {
   display: block;
   text-align: center;
+  font-family: "Anton", sans-serif;
+  font-size: 36px;
+  padding-bottom: 10px;
+}
+.textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: rgb(236, 229, 229);
+}
+
+.paragrah {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
