@@ -9,7 +9,7 @@ class OnionHater extends React.Component {
 
   handleChange(ev) {
     const appDiv = document.querySelector(".App");
-    if (ev.currentTarget.value.includes("cebolla")) {
+    if (ev.currentTarget.value.toLowerCase().includes("cebolla")) {
       this.isHating = true;
       appDiv.classList.add("red");
     } else {
