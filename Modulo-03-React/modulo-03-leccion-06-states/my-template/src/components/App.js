@@ -1,6 +1,5 @@
 import React from "react";
 import "../stylesheets/App.css";
-import Input from "./Input";
 
 class App extends React.Component {
   // eslint-disable-next-line
@@ -9,11 +8,7 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <Input />
-      </div>
-    );
+    return <div className="App">Hola Cris</div>;
   }
 }
 
