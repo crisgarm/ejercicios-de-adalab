@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../stylesheets/App.css";
+import Button from "./Button";
 
-class App extends React.Component {
-  // eslint-disable-next-line
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return <div className="App">Hola Cris</div>;
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Button />
+    </div>
+  );
+};
 
 export default App;
