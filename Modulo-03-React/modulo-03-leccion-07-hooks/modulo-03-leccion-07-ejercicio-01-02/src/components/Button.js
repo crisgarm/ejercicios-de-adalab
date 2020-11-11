@@ -9,16 +9,9 @@ function Button() {
     setGift(gift + 1);
   };
 
-  // const getGifts = () => {
-  //   setGift(gift + 1);
-  // };
-
   return (
     <>
       <p>Hoy tengo {number} años de edad</p>
-      {/* <button type="button" onClick={getNumber}>
-        Hazme más viejo
-      </button> */}
       <p>Tengo {gift} regalos</p>
       <button type="button" onClick={getNumber}>
         Hazme más viejo y dame regalos
