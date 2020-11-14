@@ -9,11 +9,7 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <OnionHater />
-      </div>
-    );
+    return <OnionHater />;
   }
 }
 
