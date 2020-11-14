@@ -7,7 +7,7 @@ class Card extends React.Component {
   }
   render() {
     return (
-      <div className="Card">
+      <div>
         <p>{this.props.name}</p>
         <p>{this.props.description}</p>
         <p>{this.props.lang}</p>
