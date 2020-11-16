@@ -13,7 +13,15 @@ class Numbers extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange() {}
+  handleChange(event) {
+    const inputValue = event.currentTarget.value;
+    const renderNumbers = numbers
+      .filter((number) => number > inputValue)
+      .map((number) => <li key={number}>{number}</li>);
+    this.setState({
+      renderNumbers: renderNumbers,
+    });
+  }
 
   render() {
     return (
@@ -28,7 +36,7 @@ class Numbers extends React.Component {
             <input
               id="evenNumber"
               type="checkbox"
-              value="chooseseat"
+              value="evenNumber"
               name="evenNumber"
             />
             Filtra por números pares:
