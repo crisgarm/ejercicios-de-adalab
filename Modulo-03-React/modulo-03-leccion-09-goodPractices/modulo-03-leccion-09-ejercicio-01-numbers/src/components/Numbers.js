@@ -1,28 +1,51 @@
 import React from "react";
 
-const numbers = [1, 4, 6, 8, 45, 89];
+const numbers = [1, 4, 6, 8, 45, 89, 999, 1200, 13498];
 
 class Numbers extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      renderNumbers: numbers.map((number) => {
-        return <li key={number}>{number}</li>;
-      }),
+      number: "",
+      checked: false,
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.handleTextInput = this.handleTextInput.bind(this);
+    this.handleCheckInput = this.handleCheckInput.bind(this);
   }
 
-  handleChange(event) {
-    const inputValue = event.currentTarget.value;
-    const renderNumbers = numbers
-      .filter((number) => number > inputValue)
-      .map((number) => <li key={number}>{number}</li>);
+  handleTextInput(ev) {
     this.setState({
-      renderNumbers: renderNumbers,
+      number: ev.target.value,
     });
   }
 
+  handleCheckInput(ev) {
+    this.setState({
+      checked: ev.target.checked,
+    });
+  }
+
+  renderNumbers() {
+    const stateNumber =
+      this.state.number === "" ? -Infinity : parseInt(this.state.number);
+    const newNumbers = numbers
+      .filter((number) => number > stateNumber)
+      .filter((number) => {
+        if (this.state.checked === true) {
+          return number % 2 === 0;
+        } else {
+          return true;
+        }
+      });
+
+    return (
+      <ul>
+        {newNumbers.map((number) => (
+          <div>{number}</div>
+        ))}
+      </ul>
+    );
+  }
   render() {
     return (
       <>
@@ -31,17 +54,19 @@ class Numbers extends React.Component {
           <label className="form__label" htmlFor="number">
             Introduce un número:
           </label>
-          <input type="number" id="number" onChange={this.handleChange} />
+          <input type="number" id="number" onChange={this.handleTextInput} />
           <label className="form__label" htmlFor="evenNumber">
             <input
               id="evenNumber"
               type="checkbox"
               value="evenNumber"
               name="evenNumber"
+              onChange={this.handleCheckInput}
             />
             Filtra por números pares:
           </label>
         </form>
+        {this.renderNumbers()}
       </>
     );
   }
