@@ -1,7 +1,7 @@
 function paddingLeft(string, desLength, paddingValue = " ") {
-  const paddingLenght = desLength - string.lenght;
-  const result = paddingValue.repeat(paddingLenght) + string;
-
-  return result;
+  while (string.length < desLength) {
+    string = paddingValue + string;
+  }
+  return string;
 }
 module.exports = paddingLeft;
