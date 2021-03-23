@@ -57,3 +57,11 @@ app.get("/response-d", (req, res) => {
     });
   }
 });
+
+app.get("/response-with-file-pdf", (req, res) => {
+  res.sendFile(__dirname + "/files/example.pdf");
+});
+
+app.get("/download-a-file", (req, res) => {
+  res.download(__dirname + "/files/example.pdf", "ejemplo.pdf");
+});
